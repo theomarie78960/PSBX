@@ -1,0 +1,50 @@
+---
+title: "Qu'est ce que Pracma ?"
+author: "Théo Marié"
+date: "Décembre 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Le package **pacma** est une librairie pour ceux qui ont la bosse des Maths, ou tout simplement pour ceux veulent utiliser quelques fonctions spéciales. En effet, ce package vous offre la possibilité de faire de l'analyse numérique, de l'algèbre niléaire, des équations différentielles, des séries chronologiques, mais aussi de travailler sur des problèmes mathématiques complexes.
+
+Première étape : l'instalation !
+
+ install.packages("pracma")
+
+
+
+**Voici quelques fonctions assez simples que l'on peut utiliser grâce à pracma**
+
+Commençons par **LA NORME DES VECTEURS**
+
+```{r}
+library(pracma)
+norm(c(1,1), type="2")
+```
+
+
+
+Transformer les degrés en radians avec **deg2rad**
+```{r}
+library(pracma)
+deg2rad(180)
+```
+
+Transformer les radians en degrés avec **rad2deg**
+```{r}
+library(pracma)
+deg2rad(3*pi)
+```
+
+Maintenant, ça se corse : vous voulez savoir quelle est la prochaine valeur égale à un carré, après n'importe quelle valeur. **nextpow2()**
+```{r}
+library(pracma)
+nextpow2(11)
+```
+Vous pouvez trouver beaucoup de ces fonctions sur ce **[site internet](https://cran.r-project.org/web/packages/pracma/pracma.pdf)**

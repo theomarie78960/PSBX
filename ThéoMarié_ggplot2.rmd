@@ -1,0 +1,26 @@
+---
+title: "Qu'est ce que le GGPLOT2 ?"
+author: "Marié Théo"
+date: "Décembre 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+A quoi sert le **GGPLOT2**? Il est très utile pour la data visualisation, afin d'analyser plus facilement une base de données.
+
+Comment l'utiliser ? La première étape pour vous est d'installer ce package. Pour cela, rien de plus simple, il suffit d'écrire: install.packages("ggplot2")
+
+Lorsqu'on utilise ggplot, il y a 3 parties qui s'enchaînent, délimitées par **+**.
+**Première partie**, il faut invoquer une table de base de données, en renseignant entre parenthèse les colonnes regroupant les données que l'on souhaite étudier.
+**Deuxième partie**, il faut décider de la nature de la forme des points du graphique.
+**Troisième partie**, on définit les limites des dimensions de la forme préalablement choisie. A vous de jouer!
+
+
+```{r}
+library("ggplot2")
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(aes(size = qsec), alpha = 0.5) + ##je choisis des ronds
+  scale_size(range = c(0.5, 12))##min 0,5, max 12
+```
+
